@@ -2,6 +2,7 @@ kind: Deployment # Deployment is kubernetes is a collection of Pd's
 apiVersion: apps/v1
 metadata:
   name: nginx-deployment
+  namespce: default
 spec:
   replicas: 5 # Number of replicas to deploy
   selector: # Gives Error if not use selector
