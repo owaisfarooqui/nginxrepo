@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: nginx  
-  spec:
-    containers:
-    - name: nginx-container
-      image: nginx:latest # Docker image to use
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest # Docker image to use
