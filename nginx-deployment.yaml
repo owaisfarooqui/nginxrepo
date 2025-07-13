@@ -1,0 +1,17 @@
+kind: Deployment # Deployment is kubernetes is a collection of Pd's
+apiVersion: apps/v1
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 5 # Number of replicas to deploy
+  selector: # Gives Error if not use selector
+    matchLabels:
+      app: nginx
+  templates:
+    metadata:
+      labels:
+        app: nginx  
+  spec:
+    containers:
+    - name: nginx-container
+      image: nginx:latest # Docker image to use
