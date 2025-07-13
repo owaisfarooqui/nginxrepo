@@ -4,11 +4,11 @@ metadata:
   name: another-nginx-deployment
   namespce: default
 spec:
-  replicas: 5 # Number of replicas to deploy
+  replicas: 2 # Number of replicas to deploy
   selector: # Gives Error if not use selector
     matchLabels:
       app: nginx
-  templates:
+  template:
     metadata:
       labels:
         app: nginx  
